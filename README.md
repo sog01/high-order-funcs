@@ -6,7 +6,7 @@ This repository serves as a demonstration of high-order function usage, showcasi
 
 ## Filter
 
-```
+```go
 func main() {
     numbers := []int{1, 2, 3, 4, 5}
     getNumberGtTwo := func(n number) bool {
@@ -18,7 +18,7 @@ func main() {
 
 ## Find
 
-```
+```go
 func main() {
     names := []string{"john", "doe", "robert", "john dorry"}
     findNameJohn := func(s string) bool {
@@ -30,7 +30,7 @@ func main() {
 
 ## Reduce
 
-```
+```go
 func main() {
     numbers := []int{1, 2, 3, 4, 5}
     sumNumbers := func(total, number int) int {
