@@ -7,29 +7,35 @@ This repository serves as a demonstration of high-order function usage, showcasi
 ## Filter
 
 ```
-numbers := []int{1, 2, 3, 4, 5}
-getNumberGtTwo := func(n number) bool {
-    return n > 2
+func main() {
+    numbers := []int{1, 2, 3, 4, 5}
+    getNumberGtTwo := func(n number) bool {
+        return n > 2
+    }
+    numbersGtTwo := Filter(numbers, getNumberGreaterThanTwo)
 }
-numbersGtTwo := Filter(numbers, getNumberGreaterThanTwo)
 ```
 
 ## Find
 
 ```
-names := []string{"john", "doe", "robert", "john dorry"}
-findNameJohn := func(s string) bool {
-    return s == "john"
+func main() {
+    names := []string{"john", "doe", "robert", "john dorry"}
+    findNameJohn := func(s string) bool {
+        return s == "john"
+    }
+    johnName := Find(names, findNameJohn)
 }
-johnName := Find(names, findNameJohn)
 ```
 
 ## Reduce
 
 ```
-numbers := []int{1, 2, 3, 4, 5}
-sumNumbers := func(total, number int) int {
-    return total + number
+func main() {
+    numbers := []int{1, 2, 3, 4, 5}
+    sumNumbers := func(total, number int) int {
+        return total + number
+    }
+    total := Reduce(numbers, sumNumbers)
 }
-total := Reduce(numbers, sumNumbers)
 ```
