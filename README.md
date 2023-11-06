@@ -28,6 +28,21 @@ func main() {
 }
 ```
 
+## Mapper
+
+```go
+func main() {
+    names := []string{"john", "doe", "robert", "john dorry"}
+    mapNameToUser := func(index int, name string) User {
+        return User{
+            Id:   index,
+            Name: name,
+        }
+    }
+    user := Map(names, mapNameToUser)
+}
+```
+
 ## Reduce
 
 ```go
