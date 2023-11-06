@@ -54,3 +54,28 @@ func main() {
     total := Reduce(numbers, sumNumbers)
 }
 ```
+
+## Sorts
+
+```go
+func main() {
+    users := []User{
+        {
+            Name: "John",
+            Age:  20,
+        },
+        {
+            Name: "Doe",
+            Age:  19,
+        },
+        {
+            Name: "Rocky",
+            Age:  18,
+        },
+    }
+    sortAgeAsc := func(before, after User) bool {
+        return before.Age < after.Age
+    }
+    userSortedByAge := Reduce(users, sortAgeAsc)
+}
+```
